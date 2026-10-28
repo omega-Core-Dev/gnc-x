@@ -82,8 +82,6 @@ gnc-x/
 ├── iniciar_gncx_lua.sh     # Inicializador interativo da CLI
 ├── compilar_linux.sh       # Script de compilação C++20 (-O3 -march=native -msse2)
 ├── verify_gncx_fixes.py    # Suite de verificação e benchmarks analíticos
-├── CONTEXTO_EXECUCAO.md    # Registro detalhado das fases e métricas de produção
-├── PLANO_DE_TAREFAS_GNCX.md# Roadmap e especificações de engenharia
 ├── LICENSE                 # Licença Apache 2.0
 ├── bin/
 │   └── gncx_llm_core.so    # Biblioteca nativa compilada
