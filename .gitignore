@@ -20,6 +20,11 @@ bin/*.dll
 __pycache__/
 *.pyc
 
+# Documentos internos de engenharia e planejamento (preservados apenas localmente)
+CONTEXTO_EXECUCAO.md
+PLANO_DE_TAREFAS_GNCX.md
+prompt_antigravity_upgrade_gncx_v26.md
+
 # IDEs e editores
 .vscode/
 .idea/
