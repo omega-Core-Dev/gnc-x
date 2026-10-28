@@ -1,0 +1,27 @@
+# Modelos binários pesados (pesos GGUF e GNCX > 13GB - baixar separadamente)
+models/*.gguf
+models/*.gncx
+models/*.bin
+!models/.gitkeep
+
+# Artefatos compilados
+bin/*.so
+bin/*.dylib
+bin/*.dll
+*.o
+*.a
+
+# Logs e arquivos temporários de execução
+*.log
+*.tmp
+.cache/
+
+# Python
+__pycache__/
+*.pyc
+
+# IDEs e editores
+.vscode/
+.idea/
+*.swp
+*~

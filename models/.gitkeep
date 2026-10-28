@@ -1,0 +1,5 @@
+# Esta pasta deve conter os arquivos GGUF dos perfis suportados:
+# - gemma-2b-it-q4_0.gguf (Perfil 1)
+# - gemma4-e2b-it-q4_k.gguf (Perfil 2)
+# - qwen3-1.7b-q4_k_m.gguf (Perfil 3)
+# - embeddinggemma-2-Q8_0.gguf (Módulo de Pré-Inferência RAG)
