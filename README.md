@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/gncx_banner.jpg" alt="GNC-X Geometric LLM Inference Engine" width="100%" />
+</p>
+
 # GNC-X — Motor Geométrico de Inferência LLM
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
