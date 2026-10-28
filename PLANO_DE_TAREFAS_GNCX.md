@@ -124,3 +124,23 @@ Este documento define o roteiro técnico de execução dividido em duas fases es
   - [x] Recuperar apenas os top-$K$ fragmentos mais relevantes com base na proximidade angular de cosseno.
   - [x] Montar prompt compacto contendo apenas os dados essenciais para o prefill do Qwen3 / Gemma 2B.
 - **Critério de Sucesso:** Redução de 70% ou mais no volume de tokens inseridos no prefill do modelo principal (80.14% atingido em teste).
+
+---
+
+## 🔮 FASE 3: Mecanismo de Raciocínio sobre Contexto e Aprendizado Contínuo (Próximo Objetivo)
+
+> **Status:** 🎯 **EM PLANEJAMENTO E ARQUITETURA CONCEITUAL**
+
+### Tarefa 3.1: Mecanismo Proprietário de Raciocínio sobre Contexto Existente
+- **Objetivo:** Substituir a operação *stateless* (sem memória) por uma arquitetura inovadora de raciocínio contextual persistente baseada no insight proprietário do projeto.
+- **Subtarefas:**
+  - [ ] Estruturação formal do algoritmo e topologia de retenção e síntese de contexto.
+  - [ ] Integração nativa do mecanismo com o `GNCXStreamer` e o alocador de memória geométrica (`GMM`).
+  - [ ] Validação de raciocínio contínuo multi-turno mantendo consumo de RAM < 2.0 GB.
+
+### Tarefa 3.2: Acoplamento do Aprendizado Contínuo Online (LoRA + MeZO no Chat)
+- **Objetivo:** Conectar as primitivas analíticas existentes em C++20 (`gncx_lora_train_step_cpu` e `gncx_mezo_step`) diretamente ao loop interativo do chat para adaptação em tempo real.
+- **Subtarefas:**
+  - [ ] Ativação do otimizador MeZO de ordem zero (sem backpropagation) para ajuste leve de pesos durante o uso.
+  - [ ] Atualização incremental de adaptadores LoRA diretamente em CPU legada.
+  - [ ] Persistência dos estados aprendidos em disco sem modificar os pesos brutos originais do GGUF.

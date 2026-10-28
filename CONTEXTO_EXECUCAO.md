@@ -31,3 +31,9 @@ Atualizar e estabilizar o motor de inferência LLM puro em C++20 e LuaJIT FFI (*
 - **Rendimento de Decodificação:** **3.52 tok/s** em CPU pura x86_64 legado com memória DDR3 a 657 MHz.
 - **Orçamento Desacoplado:** Execução simultânea de raciocínio profundo (`<think>`) e resposta final com zero truncamento.
 - **Testes Automatizados:** 100% de sucesso em `lua/testes_v26.lua`, `verify_gncx_fixes.py` e `lua/testes_v26_fase2.lua`.
+
+---
+
+## 🔮 Próximo Objetivo: FASE 3 — Raciocínio sobre Contexto e Aprendizado Contínuo Online
+- **Mecanismo Inovador de Contexto:** Desenvolvimento do modelo proprietário para superar a operação *stateless*, permitindo raciocínio dinâmico e retenção inteligente sobre o contexto existente.
+- **Aprendizado Contínuo (Online Learning):** Acoplamento das primitivas C++20 de LoRA Analítico e Otimizador MeZO (ordem zero, sem backpropagation) diretamente no loop interativo de conversação, habilitando adaptação e aprendizado contínuo dos modelos em tempo de execução na CPU.
