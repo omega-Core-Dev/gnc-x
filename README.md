@@ -9,6 +9,10 @@
 [![LuaJIT](https://img.shields.io/badge/Runtime-LuaJIT%20FFI-orange.svg)](https://luajit.org/)
 [![Platform](https://img.shields.io/badge/Platform-Linux%20x86__64-brightgreen.svg)]()
 
+[![gBench Golden Set: 15/16 PASS (93.75%)](https://img.shields.io/badge/gBench_Golden_Set-15%2F16_PASS_(93.75%25)-22c55e?style=for-the-badge)](docs/benchmarks/gbench_gemma4_e2b_celeron1005m/README.md)
+[![CPU-Only: Celeron 1005M SSE4.2 (No AVX | No GPU)](https://img.shields.io/badge/CPU--Only-Celeron_1005M_SSE4.2_%7C_No_AVX_%7C_No_GPU-f59e0b?style=for-the-badge)](docs/benchmarks/gbench_gemma4_e2b_celeron1005m/README.md)
+[![Gemma 4 E2B + Vision: 4.03 tok/s | 1.91 GB RAM](https://img.shields.io/badge/Gemma_4_E2B_%2B_Vision-4.03_tok%2Fs_%7C_1.91_GB_RAM-0ea5e9?style=for-the-badge)](docs/benchmarks/gbench_gemma4_e2b_celeron1005m/README.md)
+
 O **GNC-X** é um motor de inferência LLM puro, de alto rendimento e zero-overhead, desenvolvido em **C++20** com orquestração desacoplada via **LuaJIT FFI**. 
 
 Foi concebido especificamente para operar em hardware legado sem GPU dedicada (ex.: processadores Dual-Core x86_64, 6 GB de RAM DDR3 e discos rígidos mecânicos), alcançando geração autorregressiva contínua a **3.5+ tok/s** e consumo de memória inferior a **2.0 GB**.
