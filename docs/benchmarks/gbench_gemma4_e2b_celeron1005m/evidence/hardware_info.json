@@ -1,0 +1,71 @@
+{
+  "captured_at_utc": "2026-11-24T01:38:33Z",
+  "cpu": {
+    "model_name": "Intel(R) Celeron(R) CPU 1005M @ 1.90GHz",
+    "architecture": "x86_64",
+    "cores": 2,
+    "threads": 2,
+    "l1d_cache": "64 KiB (2 instances)",
+    "l1i_cache": "64 KiB (2 instances)",
+    "l2_cache": "512 KiB (2 instances)",
+    "l3_cache": "2 MiB (1 instance)",
+    "simd_present": [
+      "sse",
+      "sse2",
+      "ssse3",
+      "sse4_1",
+      "sse4_2",
+      "popcnt",
+      "xsave"
+    ],
+    "simd_absent": [
+      "avx",
+      "avx2",
+      "avx512f",
+      "fma",
+      "f16c"
+    ],
+    "gpu_accelerator": "None (CPU-only Ivy Bridge Integrated / Zero CUDA / Zero Vulkan compute used)"
+  },
+  "memory": {
+    "mem_total_kb": 7932116,
+    "mem_total_gib": 7.56,
+    "mem_available_kb": 5063384,
+    "mem_available_gib": 4.83,
+    "swap_total_kb": 7931900,
+    "swap_total_gib": 7.56
+  },
+  "os": {
+    "pretty_name": "Fedora Linux 45 (Workstation Edition)",
+    "kernel_release": "7.3.4-300.fc45.x86_64",
+    "machine": "x86_64",
+    "python_version": "3.15.2",
+    "luajit_version": "LuaJIT 2.1.1767980792 -- Copyright (C) 2005-2026 Mike Pall. https://luajit.org/"
+  },
+  "repos_and_harness": {
+    "gncx_git_commit": "40e1f5c772f0e534611aea3f797d9cd2da5161ca",
+    "gbench_git_commit": "d3e4283162d6c34353fa933284135d2a7ef3b9fe",
+    "gbench_scoring_version": 4,
+    "gbench_golden_scoring_fp_const": "0be2c393a287f222",
+    "gbench_scoring_fp_runtime_py315": "6f3761dc2a90038a"
+  },
+  "model_files": {
+    "gguf_path": "modelos/gemma4-e2b-it-q4_k.gguf",
+    "gguf_size_bytes": 3106738272,
+    "gguf_size_mb": 2962.82,
+    "gguf_sha256": "740185b21d22ceb83a11c3aa62ad5842ef32c70f6096d756bbee85a1e4ec34b8",
+    "mmproj_path": "modelos/mmproj-gemma4-e2b-F16.gguf",
+    "mmproj_size_bytes": 985654080,
+    "mmproj_size_mb": 939.99,
+    "mmproj_sha256": "140be8d7849741f88c50757d529b84373ee8e27052cc2236855b537f4a8215fa"
+  },
+  "isolation": {
+    "active_workspace_size_bytes_before": 5936494,
+    "gncx_benchmark_mode": "1",
+    "gncx_served_model": "gemma4",
+    "gncx_server_rss_mb_loaded": 85.3,
+    "served_model_ids": [
+      "gemma4"
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+[GNC-X Engine] GNCX_BENCHMARK_MODE=1 ativo: núcleo :8081 e active_workspace.json totalmente isolados (zero gravações).
+[GNC-X Server] Carregando modelo 'gemma4' (Gemma 4 E2B Omni-Text (35 Camadas | Q4_K + Q6_K + PLE) | 2.89 GB)...
+[GNC-X Server] Modelo 'gemma4' ativo em 457.3 ms (Memória Latente: 0 células).
+[36m================================================================================[0m
+[1;32m       GNC-X ENGINE SERVER — RUNTIME MULTIMODAL & MEMÓRIA LATENTE ATIVA         [0m
+[36m================================================================================[0m
+  • API HTTP Headless:            [1;33mhttp://127.0.0.1:8080[0m
+  • Endpoint OpenAI / Sistemas:   [1;36mhttp://127.0.0.1:8080/v1/chat/completions[0m
+  • Modelos Descobertos:          4 modelo(s) na pasta models/
+  • Memória Latente Centrada:     DESATIVADA (GNCX_BENCHMARK_MODE=1 - estado isolado)
+[36m================================================================================[0m
+
+[GNC-X Servidor] ⚙️  Prefill KV-Cache: 36 tokens (35 camadas)...
+[GNC-X Servidor] ✅ Prefill concluído em 8.02s (4.5 tok/s)
+[GNC-X Servidor] ✅ Decode concluído: 384 tok em 97.53s (3.94 tok/s | total=105.56s | tools=0 | RSS=1543.8MB)
+[GNC-X Servidor] ⚙️  Prefill KV-Cache: 85 tokens (35 camadas)...
+[GNC-X Servidor] ✅ Prefill concluído em 14.13s (6.0 tok/s)
+[GNC-X Servidor] ✅ Decode concluído: 17 tok em 4.11s (4.14 tok/s | total=18.24s | tools=1 | RSS=1548.3MB)
+[GNC-X Servidor] ⚙️  Prefill KV-Cache: 18 tokens (35 camadas)...
+[GNC-X Servidor] ✅ Prefill concluído em 3.12s (5.8 tok/s)
+[GNC-X Servidor] ✅ Decode concluído: 14 tok em 3.97s (3.52 tok/s | total=7.09s | tools=0 | RSS=1549.9MB)
+[GNC-X Servidor] ⚙️  Prefill KV-Cache: 18 tokens (35 camadas)...
+[GNC-X Servidor] ✅ Prefill concluído em 2.36s (7.6 tok/s)
+[GNC-X Servidor] ✅ Decode concluído: 11 tok em 2.63s (4.19 tok/s | total=4.99s | tools=0 | RSS=1550.6MB)
+[GNC-X Servidor] ⚙️  Prefill KV-Cache: 26 tokens (35 camadas)...
+[GNC-X Servidor] ✅ Prefill concluído em 3.56s (7.3 tok/s)
+[GNC-X Servidor] ✅ Decode concluído: 158 tok em 39.10s (4.04 tok/s | total=42.66s | tools=0 | RSS=1553.8MB)
+[GNC-X Servidor] ⚙️  Prefill KV-Cache: 24 tokens (35 camadas)...
+[GNC-X Servidor] ✅ Prefill concluído em 9.84s (2.4 tok/s)
+[GNC-X Servidor] ✅ Decode concluído: 173 tok em 43.11s (4.01 tok/s | total=52.96s | tools=0 | RSS=1902.7MB)
+[GNC-X Servidor] ⚙️  Prefill KV-Cache: 19 tokens (35 camadas)...
+[GNC-X Servidor] ✅ Prefill concluído em 3.04s (6.3 tok/s)
+[GNC-X Servidor] ✅ Decode concluído: 14 tok em 3.36s (4.17 tok/s | total=6.40s | tools=0 | RSS=1903.8MB)
+[GNC-X Servidor] ⚙️  Prefill KV-Cache: 36 tokens (35 camadas)...
+[GNC-X Servidor] ✅ Prefill concluído em 5.13s (7.0 tok/s)
+[GNC-X Servidor] ✅ Decode concluído: 25 tok em 6.01s (4.16 tok/s | total=11.15s | tools=0 | RSS=1904.9MB)
+[GNC-X Servidor] ⚙️  Prefill KV-Cache: 80 tokens (35 camadas)...
+[GNC-X Servidor] ✅ Prefill concluído em 12.45s (6.4 tok/s)
+[GNC-X Servidor] ✅ Decode concluído: 3 tok em 0.72s (4.17 tok/s | total=13.18s | tools=0 | RSS=1905.9MB)
+[GNC-X Servidor] ⚙️  Prefill KV-Cache: 54 tokens (35 camadas)...
+[GNC-X Servidor] ✅ Prefill concluído em 5.64s (9.6 tok/s)
+[GNC-X Servidor] ✅ Decode concluído: 3 tok em 0.72s (4.15 tok/s | total=6.37s | tools=0 | RSS=1906.1MB)
+[GNC-X Servidor] ⚙️  Prefill KV-Cache: 175 tokens (35 camadas)...
+[GNC-X Servidor] ✅ Prefill concluído em 31.23s (5.6 tok/s)
+[GNC-X Servidor] ✅ Decode concluído: 26 tok em 6.39s (4.07 tok/s | total=37.61s | tools=0 | RSS=1909.9MB)
+[GNC-X Servidor] ⚙️  Prefill KV-Cache: 64 tokens (35 camadas)...
+[GNC-X Servidor] ✅ Prefill concluído em 9.99s (6.4 tok/s)
+[GNC-X Servidor] ✅ Decode concluído: 18 tok em 4.34s (4.14 tok/s | total=14.34s | tools=0 | RSS=1910.4MB)
+[GNC-X Servidor] ⚙️  Prefill KV-Cache: 58 tokens (35 camadas)...
+[GNC-X Servidor] ✅ Prefill concluído em 8.85s (6.6 tok/s)
+[GNC-X Servidor] ✅ Decode concluído: 10 tok em 2.42s (4.13 tok/s | total=11.28s | tools=1 | RSS=1911.3MB)
+[GNC-X Servidor] ⚙️  Prefill KV-Cache: 20 tokens (35 camadas)...
+[GNC-X Servidor] ✅ Prefill concluído em 3.30s (6.1 tok/s)
+[GNC-X Servidor] ✅ Decode concluído: 231 tok em 58.98s (3.92 tok/s | total=62.28s | tools=0 | RSS=1916.9MB)
+[GNC-X Servidor] ⚙️  Prefill KV-Cache: 21 tokens (35 camadas)...
+[GNC-X Servidor] ✅ Prefill concluído em 2.71s (7.7 tok/s)
+[GNC-X Servidor] ✅ Decode concluído: 18 tok em 4.80s (3.75 tok/s | total=7.52s | tools=0 | RSS=1917.3MB)

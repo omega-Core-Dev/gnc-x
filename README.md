@@ -59,6 +59,24 @@ A arquitetura do GNC-X afasta-se das pilhas tradicionais de inferência (Zero Py
 
 ---
 
+## 🏆 Validação Oficial — `google-deepmind/gbench` (Gemma 4 E2B em Celeron 1005M)
+
+Submetemos o **GNC-X** (`C++20 SSE4.2 + LuaJIT FFI`, zero vLLM/PyTorch) via endpoint compatível OpenAI à suíte oficial [`google-deepmind/gbench --golden-only`](https://github.com/google-deepmind/gbench) (`v0.5.0.post1`, commit `d3e4283`) servindo `gemma4-e2b-it-q4_k.gguf` + `mmproj-gemma4-e2b-F16.gguf` em hardware legado de entrada:
+
+- **Hardware Real:** **`Intel(R) Celeron(R) CPU 1005M @ 1.90GHz`** (`2C/2T` Ivy Bridge 2013, **SSE4.2 apenas — SEM AVX, AVX2 ou FMA**, **0 GPUs**, `7.56 GiB` RAM DDR3, Fedora 45).
+- **Placar Oficial (`summary.json`):** **`15 / 16 PASS` (`93.75%`)**, **`0` erros de harness**.
+- **Destaques:** **`15/15`** em todos os casos não-áudio — `chat_template` (`4/4` com `0` vazamentos nos 24 tokens), `tool_use` (`2/2` nativo), `multimodal_vision` (`1/1` identificando *The Starry Night* / *Van Gogh* em `59.49s`), `code_generation` (`1/1` aprovado em 3/3 testes unitários), `math`, `structured_output`, `safety`, `translation` e conhecimento factual.
+- **Telemetria Medida:** **`4.03 tok/s`** médio (`3.52–4.19 tok/s`), boot `mmap` em **`457.3 ms`** (`85.3 MB` RSS) e pico de **`1917.3 MB`** de RAM.
+- **Transparência:** A única falha (`audio_transcription_smoketest`) deve-se honestamente à ausência de decodificador WAV no motor C++ atual; timeout de socket elevado de `30s` para `600s` em memória para CPU sem AVX e `GBENCH_SANDBOX=none` no runner.
+
+<p align="center">
+  <img src="docs/benchmarks/gbench_gemma4_e2b_celeron1005m/gbench_gemma4_e2b_celeron1005m.gif" alt="Prova Oficial gBench Gemma 4 E2B no GNC-X (Celeron 1005M)" width="100%" />
+</p>
+
+📂 **Auditoria Completa, Logs Brutos (`summary.json`) e Prints:** [`docs/benchmarks/gbench_gemma4_e2b_celeron1005m/README.md`](docs/benchmarks/gbench_gemma4_e2b_celeron1005m/README.md) | 📄 [**Relatório Completo (PDF)**](docs/benchmarks/gbench_gemma4_e2b_celeron1005m/relatorio_gbench_gemma4_e2b_celeron1005m.pdf)
+
+---
+
 ## ⚡ Expansibilidade para Placas Gráficas (GPUs)
 
 Embora o GNC-X tenha sido projetado e afinado para extrair a máxima eficiência em CPUs legadas sem aceleração gráfica, **sua arquitetura é intrinsecamente modular e desacoplada, pronta para ser expandida para GPUs e aceleradores**:

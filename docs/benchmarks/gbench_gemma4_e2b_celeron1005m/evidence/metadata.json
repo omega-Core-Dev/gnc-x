@@ -1,0 +1,136 @@
+{
+  "timestamp": "11-23-224118",
+  "models": [
+    "gemma-4-E2B-it"
+  ],
+  "tags": [],
+  "preset": "default",
+  "benchmark_mode": "golden set only",
+  "host": "fedora",
+  "shard": null,
+  "eval_limit": null,
+  "serve_settings": {
+    "tool_call_parser": null,
+    "reasoning_parser": null,
+    "vllm_serve_args": [],
+    "server_started_by_gbench": false,
+    "note": "not started by gbench: the remote endpoint's parsers and serve arguments are configured on that server and not known here"
+  },
+  "served_model_id": "gemma4",
+  "served_model_id_source": "--served-model-id",
+  "model_metadata": [
+    {
+      "name": "gemma-4-E2B-it",
+      "short_name": "gemma-4-E2B-it",
+      "id": "google/gemma-4-E2B-it",
+      "revision": "4adf15748de9e1a0097b6274cee9c15836c41c37",
+      "revision_source": "cache",
+      "metadata_source": "config",
+      "metadata_origin": "google/gemma-4-E2B-it",
+      "total_params_b": 1.6,
+      "is_moe": false,
+      "num_experts": 0,
+      "num_active_experts": 0,
+      "supports_multimodal": true,
+      "supports_audio": true,
+      "vision_tokens_per_image": 280,
+      "vision_tokens_source": "config",
+      "category": "multimodal",
+      "max_context_length": 131072,
+      "vision_tokens_note": "declared by the model's config/processor; each multimodal result records the per-image count it used (per_image_tokens) and its source (per_image_tokens_source: measured, config or processor)"
+    }
+  ],
+  "selected_gpus": null,
+  "parallel": {
+    "tensor_parallel_size": null,
+    "data_parallel_size": null,
+    "note": "not started by gbench: the remote endpoint's parallelism is unknown"
+  },
+  "conditions": [
+    {
+      "pillar": "golden",
+      "model": "gemma-4-E2B-it",
+      "format": "remote-endpoint",
+      "scaffold": {
+        "scaffold_id": "sc_c24d8412",
+        "contract_version": "2",
+        "pillar": "golden",
+        "covers": [
+          "decode",
+          "attempts",
+          "dataset_snapshot",
+          "prompt_version",
+          "schema_version",
+          "tool_permissions",
+          "scoring_version",
+          "serving_environment"
+        ],
+        "unpinned": [
+          "load_shape"
+        ],
+        "pinned": {
+          "decode": {
+            "temperature": 0.0,
+            "max_tokens": 512
+          },
+          "attempts": {
+            "max_attempts": 3
+          },
+          "dataset_snapshot": "gd_150d5428",
+          "scoring_version": 4,
+          "selected_tasks": null,
+          "serving_environment": {
+            "gbench_started_server": false,
+            "endpoint": "http://127.0.0.1:8080/v1",
+            "num_gpus": null,
+            "tensor_parallel_size": null,
+            "data_parallel_size": null,
+            "gpu_memory_utilization": null,
+            "max_num_seqs": null,
+            "enable_chunked_prefill": null,
+            "max_num_batched_tokens": null,
+            "max_model_len": null,
+            "serve_args": null,
+            "engine": null,
+            "gpu_models": null
+          }
+        },
+        "case_versions": {
+          "audio_transcription_smoketest": "1.1",
+          "code_canonical": "1.1",
+          "function_call_single": "1.1",
+          "identify_person": "1.2",
+          "location_identification": "1.1",
+          "math_canonical": "1.1",
+          "multimodal_vision_landmark": "1.1",
+          "safety_boundary": "1.1",
+          "structured_json": "1.1",
+          "template_multi_turn": "1.1",
+          "template_multi_turn_twin": "1.1",
+          "template_tool_response": "1.2",
+          "template_tool_response_twin": "1.1",
+          "tool_call_minimal": "1.0",
+          "translation_romance": "1.1",
+          "two_rivers_zurich": "1.1"
+        },
+        "case_count": 16
+      },
+      "subject": {
+        "subject_id": "sb_d8d6c3ca",
+        "name": "gemma-4-E2B-it",
+        "short_name": "gemma-4-E2B-it",
+        "model": "google/gemma-4-E2B-it",
+        "serving_format": "remote-endpoint",
+        "covers": [],
+        "unpinned": [
+          "model_checkpoint",
+          "quantization"
+        ]
+      }
+    }
+  ],
+  "gbench": {
+    "commit": "d3e4283162d6c34353fa933284135d2a7ef3b9fe",
+    "dirty": false
+  }
+}

@@ -1,0 +1,95 @@
+[run_golden_wrapper] repo=/tmp/gbench_official commit=d3e4283162d6 clean=True scoring_version=4 fp_const=0be2c393a287f222 fp_runtime=6f3761dc2a90038a socket_timeout_s=600 sandbox=none
+2026-11-23 22:41:18 - gbench.utils.log_manager - INFO - Results will be saved to: workspace_memory/benchmarks/gbench_gemma4_e2b/raw_gbench/11-23-224118
+2026-11-23 22:41:18 - gbench.cli - INFO - Using configuration: default
+2026-11-23 22:41:18 - gbench.cli - INFO -   Iterations: 3 (+1 warmup)
+2026-11-23 22:41:18 - gbench.cli - INFO -   Batch sizes: [1]
+2026-11-23 22:41:18 - gbench.cli - INFO -   Input/Output lengths: [128]/[512]
+2026-11-23 22:41:18 - gbench.cli - INFO -   Num prompts: serving=30 (auto-sized per config; ~5-min wall-clock target, scales with batch size and output length - NOT --num-prompts), throughput=1000
+2026-11-23 22:41:18 - gbench.cli - INFO -   Stress test: enabled (ramp-up)
+2026-11-23 22:41:18 - gbench.cli - INFO - Results directory: workspace_memory/benchmarks/gbench_gemma4_e2b/raw_gbench/11-23-224118
+2026-11-23 22:41:18 - gbench.core.models - INFO - Registered gemma-4-E2B-it from google/gemma-4-E2B-it (1.6B, dense, multimodal; metadata: config)
+2026-11-23 22:41:18 - gbench.cli - INFO - Selected 1 model(s) for benchmarking
+2026-11-23 22:41:18 - gbench.cli - INFO -   - gemma-4-E2B-it (2B)
+2026-11-23 22:41:18 - gbench.cli - INFO - Remote endpoint specified (http://127.0.0.1:8080/v1); checking if endpoint is functional...
+2026-11-23 22:41:18 - gbench.cli - INFO - Remote endpoint 'http://127.0.0.1:8080/v1' is functional and answering requests.
+2026-11-23 22:41:18 - gbench.cli - INFO -    Server reported max_model_len: 16384 tokens
+2026-11-23 22:41:18 - gbench.cli - INFO - Testing formats: ['remote-endpoint']
+2026-11-23 22:41:18 - gbench.cli - INFO - Benchmark mode: golden set only
+2026-11-23 22:41:18 - gbench.cli - INFO - 
+============================================================
+Benchmarking: gemma-4-E2B-it (remote-endpoint)
+============================================================
+2026-11-23 22:41:18 - gbench.cli - INFO -   Batch sizes for 2B: [1]
+2026-11-23 22:41:18 - gbench.cli - INFO - Running Golden Set benchmarks...
+2026-11-23 22:41:18 - gbench.runners.golden - INFO - Golden Set will request model 'gemma4' (--served-model-id)
+2026-11-23 22:41:18 - gbench.runners.golden - INFO - Running Golden Set evaluation for gemma-4-E2B-it (16 tasks) against http://127.0.0.1:8080/v1
+2026-11-23 22:43:04 - gbench.runners.eval_suites.sandbox - WARNING - GBENCH_SANDBOX=none: model-written code runs directly on this host with full filesystem and network access.
+[transformers] PyTorch was not found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+2026-11-23 22:45:39 - gbench.runners.golden - INFO - Golden Set chat-template leak check: 24 tokens from tokenizer 'google/gemma-4-E2B-it' (--tokenizer)
+2026-11-23 22:48:12 - gbench.runners.golden - INFO - Golden Set FAIL for gemma-4-E2B-it: 15/16 applicable cases passed
+2026-11-23 22:48:12 - gbench.cli - ERROR - Golden Set has failing cases (a model verdict).
+
+================================================================================
+SCAFFOLD CONTRACT (v2)
+================================================================================
+
+A result is the pair (subject, scaffold). Holding scaffold_id while
+subject_id moves is a like-for-like model comparison. A scaffold_id that
+moved means the harness moved, so scores either side are not comparable.
+
+PILLAR  MODEL           FORMAT           SUBJECT      SCAFFOLD
+golden  gemma-4-E2B-it  remote-endpoint  sb_d8d6c3ca  sc_c24d8412
+
+sc_c24d8412  pins 8/9: attempts, dataset_snapshot, decode, prompt_version,
+             schema_version, scoring_version, serving_environment,
+             tool_permissions
+             dataset gd_150d5428 over 16 case(s)
+             unpinned: load_shape
+
+Subject ids pin 0/2; unpinned: model_checkpoint, quantization. A subject id
+hashes the model id and serving format; no checkpoint revision or quantization
+level is resolved.
+
+
+================================================================================
+                           BENCHMARK RESULTS SUMMARY                            
+================================================================================
+
+GOLDEN SET (DETERMINISTIC SMOKE TEST)
+--------------------------------------------------------------------------------
+Model                Requested                Cases      Verdict   
+--------------------------------------------------------------------------------
+gemma-4-E2B-it       gemma4                   15/16      FAIL      
+  - multimodal_audio                          0/1        FAIL
+  - chat_template                             4/4        PASS
+  - code_generation                           1/1        PASS
+  - entity_identification                     1/1        PASS
+  - exact_knowledge                           1/1        PASS
+  - location_identification                   1/1        PASS
+  - math                                      1/1        PASS
+  - multimodal_vision                         1/1        PASS
+  - safety                                    1/1        PASS
+  - structured_output                         1/1        PASS
+  - tool_use                                  2/2        PASS
+  - translation                               1/1        PASS
+
+  FAIL   audio_transcription_smoketest: Missing expected substrings: ['color', 'cheese']
+
+================================================================================
+RESULTS & LOGS
+================================================================================
+
+Results Directory: /home/glc/Documentos/nucleo_memory-001/motor_memoserve/workspace_memory/benchmarks/gbench_gemma4_e2b/raw_gbench/11-23-224118
+
+================================================================================
+STATISTICAL VALIDATION
+================================================================================
+
+Total Configurations: 1
+Successful: 1
+
+================================================================================
+Benchmark suite complete! All 1 configurations passed.
+Golden Set did not pass: gemma-4-E2B-it FAIL. See the table above.
+================================================================================
+
